@@ -13,11 +13,19 @@
 
   <main class="container">
 
-    <h1>PALAVRA DO DIA</h1>
+    <div class="topo">
+      <div>
+        <h1>PALAVRA DO DIA</h1>
 
-    <p class="subtitulo">
-      Descubra a palavra da Psicologia de hoje 🧠
-    </p>
+        <p class="subtitulo">
+          Descubra a palavra da Psicologia de hoje 🧠
+        </p>
+      </div>
+
+      <button id="abrirTutorial" class="botao-tutorial">
+        Como jogar
+      </button>
+    </div>
 
     <div id="tabuleiro"></div>
 
@@ -30,6 +38,97 @@
     </button>
 
   </main>
+
+  <!-- MODAL COMO JOGAR -->
+
+  <div id="modalTutorial" class="modal">
+
+    <div class="modal-conteudo">
+
+      <button id="fecharTutorial" class="fechar-modal">
+        ×
+      </button>
+
+      <h2>Como jogar</h2>
+
+      <p>
+        Descubra a palavra do dia em até
+        <strong>6 tentativas</strong>.
+      </p>
+
+      <p>
+        A palavra de hoje possui
+        <strong>7 letras</strong>.
+      </p>
+
+      <div class="exemplo">
+
+        <div class="linha-exemplo">
+          <div class="letra correta">E</div>
+          <div class="letra exemplo-neutro">S</div>
+          <div class="letra exemplo-neutro">T</div>
+          <div class="letra exemplo-neutro">U</div>
+          <div class="letra exemplo-neutro">D</div>
+          <div class="letra exemplo-neutro">A</div>
+          <div class="letra exemplo-neutro">R</div>
+        </div>
+
+        <p>
+          <strong>Verde:</strong>
+          a letra está correta e na posição certa.
+        </p>
+
+      </div>
+
+      <div class="exemplo">
+
+        <div class="linha-exemplo">
+          <div class="letra exemplo-neutro">C</div>
+          <div class="letra posicao-errada">A</div>
+          <div class="letra exemplo-neutro">R</div>
+          <div class="letra exemplo-neutro">I</div>
+          <div class="letra exemplo-neutro">N</div>
+          <div class="letra exemplo-neutro">H</div>
+          <div class="letra exemplo-neutro">O</div>
+        </div>
+
+        <p>
+          <strong>Amarelo:</strong>
+          a letra existe na palavra, mas está na posição errada.
+        </p>
+
+      </div>
+
+      <div class="exemplo">
+
+        <div class="linha-exemplo">
+          <div class="letra incorreta">B</div>
+          <div class="letra exemplo-neutro">R</div>
+          <div class="letra exemplo-neutro">I</div>
+          <div class="letra exemplo-neutro">N</div>
+          <div class="letra exemplo-neutro">C</div>
+          <div class="letra exemplo-neutro">A</div>
+          <div class="letra exemplo-neutro">R</div>
+        </div>
+
+        <p>
+          <strong>Cinza:</strong>
+          a letra não aparece na palavra.
+        </p>
+
+      </div>
+
+      <p class="dica">
+        Você pode usar o teclado da tela ou o teclado do computador.
+      </p>
+
+      <button id="entendiTutorial" class="botao-entendi">
+        Entendi
+      </button>
+
+    </div>
+
+  </div>
 
   <script src="script.js"></script>
 
