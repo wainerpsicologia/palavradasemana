@@ -1,1 +1,97 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0c1d35;
+  color: white;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.subtitulo {
+  color: #d7dce5;
+  margin-bottom: 30px;
+}
+
+#tabuleiro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.linha {
+  display: flex;
+  gap: 8px;
+}
+
+.letra {
+  width: 55px;
+  height: 55px;
+
+  border: 2px solid #607089;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.correta {
+  background: #2f8f5b;
+  border-color: #2f8f5b;
+}
+
+.posicao-errada {
+  background: #c39a38;
+  border-color: #c39a38;
+}
+
+.incorreta {
+  background: #3a4657;
+  border-color: #3a4657;
+}
+
+#mensagem {
+  min-height: 25px;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  background: #c9a24f;
+  color: #0c1d35;
+
+  padding: 12px 20px;
+  border-radius: 6px;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
