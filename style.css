@@ -18,26 +18,50 @@ body {
 
 .container {
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
 
   padding: 30px 15px;
 
   text-align: center;
 }
 
+.topo {
+  position: relative;
+}
+
 h1 {
   margin-bottom: 5px;
-
   letter-spacing: 2px;
-
   font-size: 30px;
 }
 
 .subtitulo {
   color: #d7dce5;
-
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
+
+/* COMO JOGAR */
+
+.botao-tutorial {
+  background: transparent;
+  border: 1px solid #c9a24f;
+  color: #c9a24f;
+
+  padding: 9px 15px;
+  border-radius: 20px;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  margin-bottom: 20px;
+}
+
+.botao-tutorial:hover {
+  background: #c9a24f;
+  color: #0c1d35;
+}
+
+/* TABULEIRO */
 
 #tabuleiro {
   display: flex;
@@ -50,7 +74,6 @@ h1 {
 
 .linha {
   display: flex;
-
   gap: 7px;
 }
 
@@ -78,19 +101,16 @@ h1 {
 
 .correta {
   background: #2f8f5b;
-
   border-color: #2f8f5b;
 }
 
 .posicao-errada {
   background: #c39a38;
-
   border-color: #c39a38;
 }
 
 .incorreta {
   background: #3a4657;
-
   border-color: #3a4657;
 }
 
@@ -159,8 +179,6 @@ h1 {
   min-width: 55px;
 }
 
-/* CORES DO TECLADO */
-
 .tecla.correta {
   background: #2f8f5b;
 }
@@ -172,6 +190,8 @@ h1 {
 .tecla.incorreta {
   background: #3a4657;
 }
+
+/* BOTÃO REINICIAR */
 
 #reiniciar {
   margin-top: 25px;
@@ -195,9 +215,142 @@ h1 {
   opacity: 0.9;
 }
 
+/* MODAL */
+
+.modal {
+  display: none;
+
+  position: fixed;
+
+  z-index: 1000;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.modal.ativo {
+  display: flex;
+}
+
+.modal-conteudo {
+  position: relative;
+
+  width: 100%;
+  max-width: 520px;
+
+  background: #132844;
+
+  border-radius: 14px;
+
+  padding: 30px;
+
+  text-align: left;
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.4);
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+}
+
+.modal-conteudo h2 {
+  margin-top: 0;
+
+  text-align: center;
+
+  color: #c9a24f;
+}
+
+.modal-conteudo p {
+  line-height: 1.5;
+
+  color: #e7ebf0;
+}
+
+.fechar-modal {
+  position: absolute;
+
+  right: 15px;
+  top: 10px;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
+
+.exemplo {
+  margin-top: 25px;
+}
+
+.linha-exemplo {
+  display: flex;
+
+  gap: 5px;
+
+  margin-bottom: 10px;
+}
+
+.exemplo-neutro {
+  background: transparent;
+}
+
+.dica {
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #36506f;
+}
+
+.botao-entendi {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  border: none;
+
+  background: #c9a24f;
+
+  color: #0c1d35;
+
+  padding: 13px;
+
+  border-radius: 7px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
 /* CELULAR */
 
 @media (max-width: 500px) {
+
+  .container {
+    padding-top: 20px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
 
   .letra {
     width: 40px;
@@ -226,5 +379,16 @@ h1 {
 
   .tecla-apagar {
     min-width: 45px;
+  }
+
+  .modal-conteudo {
+    padding: 25px 18px;
+  }
+
+  .linha-exemplo .letra {
+    width: 36px;
+    height: 36px;
+
+    font-size: 17px;
   }
 }
