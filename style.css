@@ -4,218 +4,327 @@
 
 body {
   margin: 0;
+
   min-height: 100vh;
 
-  background: #0c1d35;
-  color: white;
+  background: #0b1d33;
 
-  font-family: Arial, sans-serif;
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
   display: flex;
-  align-items: center;
+
   justify-content: center;
+
+  align-items: flex-start;
 }
+
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
 
 .container {
   width: 100%;
-  max-width: 650px;
 
-  padding: 30px 15px;
+  max-width: 620px;
+
+  padding:
+    30px
+    15px
+    45px;
 
   text-align: center;
 }
 
-.topo {
+
+header {
   position: relative;
-}
 
-h1 {
-  margin-bottom: 5px;
-  letter-spacing: 2px;
-  font-size: 30px;
-}
-
-.subtitulo {
-  color: #d7dce5;
   margin-bottom: 25px;
 }
 
-/* COMO JOGAR */
 
-.botao-tutorial {
+h1 {
+  margin:
+    15px
+    0
+    5px;
+
+  font-size: 30px;
+
+  letter-spacing: 3px;
+}
+
+
+.subtitulo {
+  margin:
+    5px
+    0
+    15px;
+
+  color: #cbd4df;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   COMO JOGAR
+========================= */
+
+.como-jogar {
   background: transparent;
-  border: 1px solid #c9a24f;
-  color: #c9a24f;
 
-  padding: 9px 15px;
-  border-radius: 20px;
+  color: #d1ad59;
+
+  border:
+    1px solid
+    #d1ad59;
+
+  border-radius: 30px;
+
+  padding:
+    8px
+    15px;
+
+  font-size: 13px;
 
   font-weight: bold;
+
   cursor: pointer;
-
-  margin-bottom: 20px;
 }
 
-.botao-tutorial:hover {
-  background: #c9a24f;
-  color: #0c1d35;
+
+.como-jogar:hover {
+  background: #d1ad59;
+
+  color: #0b1d33;
 }
 
-/* TABULEIRO */
+
+/* =========================
+   TABULEIRO
+========================= */
 
 #tabuleiro {
   display: flex;
+
   flex-direction: column;
 
-  gap: 8px;
-
   align-items: center;
+
+  gap: 7px;
 }
+
 
 .linha {
   display: flex;
+
   gap: 7px;
 }
 
+
 .letra {
-  width: 48px;
-  height: 48px;
+  width: 49px;
 
-  border: 2px solid #607089;
-
-  border-radius: 6px;
+  height: 49px;
 
   display: flex;
 
-  align-items: center;
   justify-content: center;
+
+  align-items: center;
+
+  border:
+    2px solid
+    #52667e;
+
+  border-radius: 6px;
 
   font-size: 23px;
 
-  font-weight: bold;
+  font-weight: 700;
 
   text-transform: uppercase;
 
-  transition: 0.2s;
+  background: #0b1d33;
+
+  transition:
+    background 0.2s,
+    border 0.2s,
+    transform 0.1s;
 }
 
-.correta {
-  background: #2f8f5b;
-  border-color: #2f8f5b;
+
+/* RESULTADOS */
+
+.correta,
+.verde {
+  background: #34875a !important;
+
+  border-color: #34875a !important;
+
+  color: white;
 }
 
-.posicao-errada {
-  background: #c39a38;
-  border-color: #c39a38;
+
+.posicao-errada,
+.amarelo {
+  background: #bb9136 !important;
+
+  border-color: #bb9136 !important;
+
+  color: white;
 }
 
-.incorreta {
-  background: #3a4657;
-  border-color: #3a4657;
+
+.incorreta,
+.cinza {
+  background: #374557 !important;
+
+  border-color: #374557 !important;
+
+  color: white;
 }
+
+
+/* =========================
+   MENSAGEM
+========================= */
 
 #mensagem {
-  min-height: 30px;
+  min-height: 25px;
 
-  margin: 20px 0;
+  margin:
+    18px
+    0;
 
-  font-weight: bold;
+  font-size: 15px;
+
+  font-weight: 700;
 }
 
-/* TECLADO */
+
+/* =========================
+   TECLADO
+========================= */
 
 #teclado {
-  margin-top: 10px;
-
   display: flex;
 
   flex-direction: column;
 
+  align-items: center;
+
   gap: 7px;
 
-  align-items: center;
+  margin-top: 5px;
 }
+
 
 .linha-teclado {
+  width: 100%;
+
   display: flex;
 
-  gap: 5px;
-
   justify-content: center;
+
+  gap: 5px;
 }
 
+
 .tecla {
-  min-width: 36px;
   height: 48px;
 
-  padding: 0 8px;
+  min-width: 38px;
+
+  padding:
+    0
+    7px;
 
   border: none;
 
   border-radius: 5px;
 
-  background: #536174;
+  background: #526174;
 
   color: white;
 
   font-size: 14px;
 
-  font-weight: bold;
+  font-weight: 700;
 
   cursor: pointer;
 
-  transition: 0.2s;
+  transition:
+    transform 0.1s,
+    opacity 0.2s,
+    background 0.2s;
 }
+
 
 .tecla:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
+
+
+.tecla:active {
+  transform: scale(0.95);
+}
+
 
 .tecla-enter {
-  min-width: 65px;
+  min-width: 68px;
+
+  font-size: 11px;
 }
+
 
 .tecla-apagar {
-  min-width: 55px;
+  min-width: 52px;
+
+  font-size: 20px;
 }
 
-.tecla.correta {
-  background: #2f8f5b;
-}
 
-.tecla.posicao-errada {
-  background: #c39a38;
-}
+/* =========================
+   REINICIAR
+========================= */
 
-.tecla.incorreta {
-  background: #3a4657;
-}
-
-/* BOTÃO REINICIAR */
-
-#reiniciar {
+.reiniciar {
   margin-top: 25px;
+
+  background: #d1ad59;
+
+  color: #0b1d33;
 
   border: none;
 
-  background: #c9a24f;
-
-  color: #0c1d35;
-
-  padding: 12px 20px;
-
   border-radius: 6px;
+
+  padding:
+    12px
+    20px;
 
   font-weight: bold;
 
   cursor: pointer;
 }
 
-#reiniciar:hover {
+
+.reiniciar:hover {
   opacity: 0.9;
 }
 
-/* MODAL */
+
+/* =========================
+   MODAL
+========================= */
 
 .modal {
   display: none;
@@ -224,67 +333,97 @@ h1 {
 
   z-index: 1000;
 
-  left: 0;
-  top: 0;
+  inset: 0;
 
-  width: 100%;
-  height: 100%;
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      0.75
+    );
 
-  background: rgba(0, 0, 0, 0.7);
+  padding: 18px;
 
-  align-items: center;
   justify-content: center;
 
-  padding: 20px;
+  align-items: center;
 }
+
 
 .modal.ativo {
   display: flex;
 }
 
+
 .modal-conteudo {
   position: relative;
 
   width: 100%;
+
   max-width: 520px;
-
-  background: #132844;
-
-  border-radius: 14px;
-
-  padding: 30px;
-
-  text-align: left;
-
-  box-shadow:
-    0 15px 50px rgba(0, 0, 0, 0.4);
 
   max-height: 90vh;
 
   overflow-y: auto;
+
+  background: #132944;
+
+  border:
+    1px solid
+    #314b68;
+
+  border-radius: 14px;
+
+  padding:
+    30px
+    28px;
+
+  text-align: left;
+
+  box-shadow:
+    0
+    15px
+    50px
+    rgba(
+      0,
+      0,
+      0,
+      0.5
+    );
 }
 
+
 .modal-conteudo h2 {
-  margin-top: 0;
+  margin:
+    0
+    0
+    20px;
+
+  color: #d1ad59;
 
   text-align: center;
 
-  color: #c9a24f;
+  font-size: 27px;
 }
+
 
 .modal-conteudo p {
-  line-height: 1.5;
+  line-height: 1.45;
 
-  color: #e7ebf0;
+  color: #e1e7ee;
 }
 
-.fechar-modal {
+
+.fechar {
   position: absolute;
 
-  right: 15px;
-  top: 10px;
+  right: 14px;
+
+  top: 8px;
 
   border: none;
+
   background: transparent;
 
   color: white;
@@ -294,101 +433,183 @@ h1 {
   cursor: pointer;
 }
 
-.exemplo {
+
+/* =========================
+   EXEMPLOS
+========================= */
+
+.tutorial-item {
   margin-top: 25px;
 }
 
-.linha-exemplo {
+
+.exemplo-palavra {
   display: flex;
 
   gap: 5px;
 
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.exemplo-neutro {
-  background: transparent;
+
+.quadrado {
+  width: 39px;
+
+  height: 39px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border:
+    2px solid
+    #52667e;
+
+  border-radius: 4px;
+
+  font-size: 18px;
+
+  font-weight: bold;
 }
 
-.dica {
+
+.regra-final {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
   margin-top: 25px;
 
-  padding-top: 20px;
+  padding:
+    18px
+    0
+    0;
 
-  border-top: 1px solid #36506f;
+  border-top:
+    1px solid
+    #38516c;
+
+  color: #e1e7ee;
+
+  line-height: 1.45;
 }
 
-.botao-entendi {
-  display: block;
 
+.entendi {
   width: 100%;
 
-  margin-top: 20px;
+  margin-top: 25px;
+
+  background: #d1ad59;
+
+  color: #0b1d33;
 
   border: none;
 
-  background: #c9a24f;
-
-  color: #0c1d35;
-
-  padding: 13px;
-
   border-radius: 7px;
+
+  padding: 14px;
+
+  font-size: 14px;
 
   font-weight: bold;
 
   cursor: pointer;
 }
 
-/* CELULAR */
 
-@media (max-width: 500px) {
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 520px) {
 
   .container {
-    padding-top: 20px;
+    padding:
+      20px
+      8px
+      35px;
   }
 
+
   h1 {
-    font-size: 25px;
+    font-size: 24px;
+
+    letter-spacing: 2px;
   }
+
+
+  .subtitulo {
+    font-size: 13px;
+  }
+
+
+  .linha {
+    gap: 4px;
+  }
+
 
   .letra {
     width: 40px;
+
     height: 40px;
 
-    font-size: 20px;
+    font-size: 19px;
   }
 
-  .linha {
-    gap: 5px;
+
+  .linha-teclado {
+    gap: 3px;
   }
+
 
   .tecla {
-    min-width: 29px;
-
-    padding: 0 5px;
+    min-width: 30px;
 
     height: 45px;
+
+    padding:
+      0
+      4px;
 
     font-size: 12px;
   }
 
+
   .tecla-enter {
-    min-width: 55px;
+    min-width: 53px;
+
+    font-size: 9px;
   }
+
 
   .tecla-apagar {
-    min-width: 45px;
+    min-width: 43px;
   }
+
 
   .modal-conteudo {
-    padding: 25px 18px;
+    padding:
+      27px
+      17px;
   }
 
-  .linha-exemplo .letra {
-    width: 36px;
-    height: 36px;
 
-    font-size: 17px;
+  .quadrado {
+    width: 35px;
+
+    height: 35px;
+
+    font-size: 16px;
   }
+
+
+  .exemplo-palavra {
+    gap: 3px;
+  }
+
 }
