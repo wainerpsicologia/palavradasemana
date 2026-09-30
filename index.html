@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Palavra do Dia Wainer</title>
+  <title>Palavra do Dia | Wainer</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,124 +14,187 @@
 
   <main class="container">
 
-    <div class="topo">
-      <div>
-        <h1>PALAVRA DO DIA</h1>
+    <header>
 
-        <p class="subtitulo">
-          Descubra a palavra da Psicologia de hoje 🧠
-        </p>
-      </div>
-
-      <button id="abrirTutorial" class="botao-tutorial">
-        Como jogar
+      <button
+        id="abrirTutorial"
+        class="como-jogar"
+        type="button"
+      >
+        ? Como jogar
       </button>
-    </div>
+
+      <h1>PALAVRA DO DIA</h1>
+
+      <p class="subtitulo">
+        Descubra a palavra da Psicologia de hoje 🧠
+      </p>
+
+    </header>
+
+
+    <!-- TABULEIRO -->
 
     <div id="tabuleiro"></div>
 
+
+    <!-- MENSAGENS -->
+
     <p id="mensagem"></p>
+
+
+    <!-- TECLADO -->
 
     <div id="teclado"></div>
 
-    <button id="reiniciar">
+
+    <!-- REINICIAR -->
+
+    <button
+      id="reiniciar"
+      class="reiniciar"
+      type="button"
+    >
       Jogar novamente
     </button>
 
   </main>
 
-  <!-- MODAL COMO JOGAR -->
 
-  <div id="modalTutorial" class="modal">
+  <!-- =========================
+       MODAL COMO JOGAR
+  ========================== -->
+
+  <div
+    id="modalTutorial"
+    class="modal"
+  >
 
     <div class="modal-conteudo">
 
-      <button id="fecharTutorial" class="fechar-modal">
+      <button
+        id="fecharTutorial"
+        class="fechar"
+        type="button"
+        aria-label="Fechar"
+      >
         ×
       </button>
+
 
       <h2>Como jogar</h2>
 
       <p>
-        Descubra a palavra do dia em até
-        <strong>6 tentativas</strong>.
+        Descubra a <strong>palavra do dia</strong>
+        em até 6 tentativas.
       </p>
 
       <p>
-        A palavra de hoje possui
-        <strong>7 letras</strong>.
+        Digite uma palavra de
+        <strong>7 letras</strong>
+        e pressione ENTER.
       </p>
 
-      <div class="exemplo">
 
-        <div class="linha-exemplo">
-          <div class="letra correta">E</div>
-          <div class="letra exemplo-neutro">S</div>
-          <div class="letra exemplo-neutro">T</div>
-          <div class="letra exemplo-neutro">U</div>
-          <div class="letra exemplo-neutro">D</div>
-          <div class="letra exemplo-neutro">A</div>
-          <div class="letra exemplo-neutro">R</div>
+      <!-- VERDE -->
+
+      <div class="tutorial-item">
+
+        <div class="exemplo-palavra">
+
+          <span class="quadrado verde">E</span>
+          <span class="quadrado">S</span>
+          <span class="quadrado">T</span>
+          <span class="quadrado">U</span>
+          <span class="quadrado">D</span>
+          <span class="quadrado">A</span>
+          <span class="quadrado">R</span>
+
         </div>
 
         <p>
-          <strong>Verde:</strong>
-          a letra está correta e na posição certa.
+          A letra <strong>E</strong> está na palavra
+          e está na <strong>posição correta</strong>.
         </p>
 
       </div>
 
-      <div class="exemplo">
 
-        <div class="linha-exemplo">
-          <div class="letra exemplo-neutro">C</div>
-          <div class="letra posicao-errada">A</div>
-          <div class="letra exemplo-neutro">R</div>
-          <div class="letra exemplo-neutro">I</div>
-          <div class="letra exemplo-neutro">N</div>
-          <div class="letra exemplo-neutro">H</div>
-          <div class="letra exemplo-neutro">O</div>
+      <!-- AMARELO -->
+
+      <div class="tutorial-item">
+
+        <div class="exemplo-palavra">
+
+          <span class="quadrado">C</span>
+          <span class="quadrado amarelo">A</span>
+          <span class="quadrado">R</span>
+          <span class="quadrado">I</span>
+          <span class="quadrado">N</span>
+          <span class="quadrado">H</span>
+          <span class="quadrado">O</span>
+
         </div>
 
         <p>
-          <strong>Amarelo:</strong>
-          a letra existe na palavra, mas está na posição errada.
+          A letra <strong>A</strong> está na palavra,
+          mas em <strong>outra posição</strong>.
         </p>
 
       </div>
 
-      <div class="exemplo">
 
-        <div class="linha-exemplo">
-          <div class="letra incorreta">B</div>
-          <div class="letra exemplo-neutro">R</div>
-          <div class="letra exemplo-neutro">I</div>
-          <div class="letra exemplo-neutro">N</div>
-          <div class="letra exemplo-neutro">C</div>
-          <div class="letra exemplo-neutro">A</div>
-          <div class="letra exemplo-neutro">R</div>
+      <!-- CINZA -->
+
+      <div class="tutorial-item">
+
+        <div class="exemplo-palavra">
+
+          <span class="quadrado cinza">B</span>
+          <span class="quadrado">R</span>
+          <span class="quadrado">I</span>
+          <span class="quadrado">N</span>
+          <span class="quadrado">C</span>
+          <span class="quadrado">A</span>
+          <span class="quadrado">R</span>
+
         </div>
 
         <p>
-          <strong>Cinza:</strong>
-          a letra não aparece na palavra.
+          A letra <strong>B</strong>
+          não faz parte da palavra.
         </p>
 
       </div>
 
-      <p class="dica">
-        Você pode usar o teclado da tela ou o teclado do computador.
-      </p>
 
-      <button id="entendiTutorial" class="botao-entendi">
-        Entendi
+      <div class="regra-final">
+
+        <strong>Você tem 6 tentativas.</strong>
+
+        <span>
+          As letras do teclado também mudam de cor
+          para ajudar nas próximas tentativas.
+        </span>
+
+      </div>
+
+
+      <button
+        id="entendiTutorial"
+        class="entendi"
+        type="button"
+      >
+        Entendi, vamos jogar!
       </button>
 
     </div>
 
   </div>
 
+
   <script src="script.js"></script>
 
 </body>
+
 </html>
