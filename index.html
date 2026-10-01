@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Palavra do Dia | Wainer</title>
+  <title>Palavra da Semana | Wainer</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,19 +16,31 @@
 
     <header>
 
-      <button
-        id="abrirTutorial"
-        class="como-jogar"
-        type="button"
-      >
-        ? Como jogar
-      </button>
-
-      <h1>PALAVRA DO DIA</h1>
+      <h1>PALAVRA DA SEMANA</h1>
 
       <p class="subtitulo">
-        Descubra a palavra da Psicologia de hoje 🧠
+        Descubra a palavra da Psicologia desta semana 🧠
       </p>
+
+      <div class="botoes-topo">
+
+        <button
+          id="abrirTutorial"
+          class="botao-topo"
+          type="button"
+        >
+          ? Como jogar
+        </button>
+
+        <button
+          id="abrirDica"
+          class="botao-topo"
+          type="button"
+        >
+          💡 Dica
+        </button>
+
+      </div>
 
     </header>
 
@@ -81,17 +93,16 @@
         ×
       </button>
 
-
       <h2>Como jogar</h2>
 
       <p>
-        Descubra a <strong>palavra do dia</strong>
+        Descubra a <strong>palavra da semana</strong>
         em até 6 tentativas.
       </p>
 
       <p>
         Digite uma palavra de
-        <strong>7 letras</strong>
+        <strong>5 letras</strong>
         e pressione ENTER.
       </p>
 
@@ -102,18 +113,16 @@
 
         <div class="exemplo-palavra">
 
-          <span class="quadrado verde">E</span>
-          <span class="quadrado">S</span>
+          <span class="quadrado verde">M</span>
+          <span class="quadrado">E</span>
+          <span class="quadrado">N</span>
           <span class="quadrado">T</span>
-          <span class="quadrado">U</span>
-          <span class="quadrado">D</span>
-          <span class="quadrado">A</span>
-          <span class="quadrado">R</span>
+          <span class="quadrado">E</span>
 
         </div>
 
         <p>
-          A letra <strong>E</strong> está na palavra
+          A letra em <strong>verde</strong> faz parte da palavra
           e está na <strong>posição correta</strong>.
         </p>
 
@@ -126,19 +135,17 @@
 
         <div class="exemplo-palavra">
 
-          <span class="quadrado">C</span>
-          <span class="quadrado amarelo">A</span>
-          <span class="quadrado">R</span>
-          <span class="quadrado">I</span>
+          <span class="quadrado">A</span>
+          <span class="quadrado amarelo">L</span>
+          <span class="quadrado">U</span>
           <span class="quadrado">N</span>
-          <span class="quadrado">H</span>
           <span class="quadrado">O</span>
 
         </div>
 
         <p>
-          A letra <strong>A</strong> está na palavra,
-          mas em <strong>outra posição</strong>.
+          A letra em <strong>amarelo</strong> faz parte da palavra,
+          mas está na <strong>posição errada</strong>.
         </p>
 
       </div>
@@ -150,18 +157,16 @@
 
         <div class="exemplo-palavra">
 
-          <span class="quadrado cinza">B</span>
-          <span class="quadrado">R</span>
+          <span class="quadrado cinza">P</span>
+          <span class="quadrado">S</span>
           <span class="quadrado">I</span>
-          <span class="quadrado">N</span>
-          <span class="quadrado">C</span>
-          <span class="quadrado">A</span>
-          <span class="quadrado">R</span>
+          <span class="quadrado">Q</span>
+          <span class="quadrado">U</span>
 
         </div>
 
         <p>
-          A letra <strong>B</strong>
+          A letra em <strong>cinza</strong>
           não faz parte da palavra.
         </p>
 
@@ -186,6 +191,45 @@
         type="button"
       >
         Entendi, vamos jogar!
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       MODAL DICA
+  ========================== -->
+
+  <div
+    id="modalDica"
+    class="modal"
+  >
+
+    <div class="modal-conteudo modal-dica">
+
+      <button
+        id="fecharDica"
+        class="fechar"
+        type="button"
+        aria-label="Fechar"
+      >
+        ×
+      </button>
+
+      <h2>Dica 💡</h2>
+
+      <p class="texto-dica">
+        Sobrenome de um famoso psicólogo.
+      </p>
+
+      <button
+        id="entendiDica"
+        class="entendi"
+        type="button"
+      >
+        Voltar ao jogo
       </button>
 
     </div>
